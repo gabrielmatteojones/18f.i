@@ -1,19 +1,19 @@
 {
   "links": [
     {
-      "name": "twitter",
-      "url": "https://twitter.com/zerostaticio",
-      "image": "images/social/twitter.svg"
+      "name": "instagram",
+      "url": "https://instagram.com/gabrielmatteojones_official",
+      "image": "images/social/instagram.svg"
     },
     {
       "name": "github",
-      "url": "https://github.com/zerostaticthemes/hugo-winston-theme",
+      "url": "https://github.com/gabrielmatteojones",
       "image": "images/social/github.svg"
     },
     {
-      "name": "linkedin",
-      "url": "https://www.linkedin.com",
-      "image": "images/social/linkedin.svg"
+      "name": "logo",
+      "url": "/gabrieljones/",
+      "image": "images/social/logo.svg"
     }
   ]
 }
