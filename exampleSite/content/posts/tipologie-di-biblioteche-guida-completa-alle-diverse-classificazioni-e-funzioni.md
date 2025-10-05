@@ -1,6 +1,5 @@
 ---
-title: "Tipologie di Biblioteche: Guida Completa alle Diverse Classificazioni e
-  Funzioni"
+title: Classificazione delle biblioteche italiane
 date: 2025-10-05T12:09:00.000+02:00
 description: "Scopri tutte le tipologie di biblioteche: pubbliche,
   universitarie, scolastiche, nazionali e digitali. Approfondisci le loro
