@@ -47,29 +47,20 @@ pygmentsUseClasses = true
     weight = 2
 
   [[menu.main]]
-    identifier = 'services'
-    name = 'Servizi'
-    url = '/services/'
-    weight = 3
+    identifier = 'Tag'
+    name = 'Tag'
+    url = 'https://18f.it/tags/'
+    weight = 3  
 
-    # figli (submenu)
-    [[menu.main]]
-      parent = 'services'
-      identifier = 'web'
-      name = 'Sviluppo Web'
-      url = '/services/web/'
-      weight = 1
-
-    [[menu.main]]
-      parent = 'services'
-      identifier = 'seo'
-      name = 'SEO'
-      url = '/services/seo/'
-      weight = 2
-
+  [[menu.main]]
+    identifier = 'Blog'
+    name = 'Blog'
+    url = 'https://18f.it/posts/'
+    weight = 4
+    
   [[menu.main]]
     identifier = 'contact'
     name = 'Contatti'
     url = '/contact/'
-    weight = 4
+    weight = 5
 
