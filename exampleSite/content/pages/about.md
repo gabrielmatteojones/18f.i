@@ -1,7 +1,7 @@
 ---
 title: About
 url: about
-image: images/writer.jpeg
+image: /images/uploads/img_2619.heic
 menu:
   main:
     name: About
