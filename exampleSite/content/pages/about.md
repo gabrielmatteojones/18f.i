@@ -1,7 +1,7 @@
 ---
 title: About
 url: about
-image: /images/uploads/img_2619.png
+image: /images/uploads/progetto-senza-titolo.png
 menu:
   main:
     name: About
