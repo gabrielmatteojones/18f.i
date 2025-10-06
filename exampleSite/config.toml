@@ -32,8 +32,44 @@ pygmentsUseClasses = true
       xhtml = false
 
 [menu]
+
   [[menu.main]]
     identifier = 'home'
     name = 'Home'
     url = '/'
     weight = 1
+    pre = "<i class='fa fa-home'></i>" # opzionale: icona prima del testo
+
+  [[menu.main]]
+    identifier = 'about'
+    name = 'Chi sono'
+    url = '/about/'
+    weight = 2
+
+  [[menu.main]]
+    identifier = 'services'
+    name = 'Servizi'
+    url = '/services/'
+    weight = 3
+
+    # figli (submenu)
+    [[menu.main]]
+      parent = 'services'
+      identifier = 'web'
+      name = 'Sviluppo Web'
+      url = '/services/web/'
+      weight = 1
+
+    [[menu.main]]
+      parent = 'services'
+      identifier = 'seo'
+      name = 'SEO'
+      url = '/services/seo/'
+      weight = 2
+
+  [[menu.main]]
+    identifier = 'contact'
+    name = 'Contatti'
+    url = '/contact/'
+    weight = 4
+
