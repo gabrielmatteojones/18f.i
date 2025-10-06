@@ -2,6 +2,7 @@
 title: Come creare elementi di grafica semplicemente e velocemente con Adobe
   Illustrator
 date: 2025-09-20T12:56:00.000+02:00
+tags: example
 description: Scopri come creare elementi grafici semplicemente e velocemente con
   Adobe Illustrator, il software di grafica vettoriale professionale. In questa
   guida passo passo impari a utilizzare forme base, applicare colori e
