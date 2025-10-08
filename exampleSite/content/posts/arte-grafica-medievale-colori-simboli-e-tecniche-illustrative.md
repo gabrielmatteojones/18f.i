@@ -1,6 +1,6 @@
 ---
 title: "Arte grafica medievale: colori, simboli e tecniche illustrative"
-date: 2025-10-06T13:26:00.000+02:00
+date: 2025-09-25T20:16:00.000+02:00
 tags: Grafica
 description: "Scopri il mondo affascinante dell’arte grafica medievale: linee
   decise, colori vividi e simbolismi potenti che raccontano storie di fede e
