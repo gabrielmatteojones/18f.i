@@ -1,6 +1,6 @@
 ---
 title: "Che cos’è la DSA: una panoramica sui Disturbi Specifici dell’Apprendimento"
-date: 2025-10-08T20:18:00.000+02:00
+date: 2025-08-20T20:18:00.000+02:00
 tags: fi25
 description: Il termine DSA, acronimo di Disturbo Specifico dell’Apprendimento,
   si riferisce a un insieme di disturbi del neurosviluppo che interferiscono con
