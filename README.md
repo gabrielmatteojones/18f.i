@@ -1,123 +1,62 @@
-# Hugo Winston Theme
+# :construction: WIP :construction: Swiss Jekyll Theme
 
-Hugo Winston is a bold minimal blogging theme.
+Swiss is a bold Jekyll theme inspired by Swiss design and the works of Massimo Vignelli. This theme lends itself well to sites heavy on written content.
 
-[Live Demo](https://hugo-winston.netlify.app/) |
-[Zerostatic Themes](https://www.zerostatic.io/)
-
-![Hugo Winston Theme screenshot](https://www.zerostatic.io/theme/hugo-winston/hugo-winston-screenshot.png)
-
-## Theme features
-
-- Posts (Markdown)
-- Basic Page (Markdown)
-- SCSS (Hugo Pipelines)
-- Responsive design
-- 100/100 Google Lighthouse speed score
-- 100/100 Google Lighthouse SEO score
-- 100/100 Google Lighthouse accessibility score
-- Google analytics configured in `config.toml`
-- Configure GID using env variable HUGO_GOOGLE_ANALYTICS_ID, compatible with Netlify.
-- Title, meta description and meta tags automatically generated for every page
-- OG Meta data for Facebook and Twitter
-- Semantic HTML document structure
+### Features:
+* Mobile-first design ensures this theme performs fastest on mobile while scaling elegantly to desktop-size screens.
+* Designed for blogs and sites heavy on written content, with bold typography styles, homepage summaries, and previous/next snippets.
+* Supports a wide range of HTML elements and markdown.
+* Flexible styles that can be reused for customization without adding additional CSS.
+* Dynamically generated navigation links. See docs for adding pages with specific post category for-loops.
 
 ## Installation
 
-**1. Install Hugo**
+Add this line to your Jekyll site's Gemfile:
 
-To use this theme you will first need to have Hugo installed. Please follow the official [installation guide](https://gohugo.io/getting-started/installing/)
-
-> ⚠️ **Note:** Check your Hugo version - **Hugo Extended** is required!
-
-This theme uses [Hugo Pipes](https://gohugo.io/hugo-pipes/scss-sass/) to compile SCSS and minify assets which means if you are not using the Hugo extended version this theme will not work. To check your version of Hugo, run `hugo version`. Make sure you see **/extended** after the version number, for example _Hugo Static Site Generator v0.51/extended darwin/amd64 BuildDate: unknown_ You do not need to use version v0.51 specifically, it just needs to have the _/extended_ part.
-
-**2. Create a new Hugo site**
-
-This will create a fresh Hugo site in the folder `mynewsite`.
-
-```
-hugo new site mynewsite
+```ruby
+gem "jekyll-swiss"
 ```
 
-**3. Install the theme**
+And add this line to your Jekyll site:
 
-Download or git clone this theme into the sites themes folder `mynewsite/themes`. You should end up with the following folder structure `mynewsite/themes/hugo-winston-theme`
-
-```
-cd mynewsite
-git clone https://github.com/zerostaticthemes/hugo-winston-theme.git themes/hugo-winston-theme
+```yaml
+theme: jekyll-swiss
 ```
 
-**4. Copy the example content**
+And then execute:
 
-Copy the entire contents of the `mynewsite/themes/hugo-winston-theme/exampleSite/` folder to root folder of your Hugo site, ie `mynewsite/`. To copy the files using terminal, make sure you are still in the projects root, ie the `mynewsite` folder.
+    $ bundle
 
-```
-cp -a themes/hugo-serif-theme/exampleSite/. .
-```
+Or install it yourself as:
 
-**6. Run Hugo**
+    $ gem install jekyll-swiss
 
-After installing the theme for the first time, generate the Hugo site.
+## Usage
+This theme comes in eight different color variations. The default is set to the black theme, to change to a different theme edit the config under `theme-color: black` to one of the following colors:
 
-You run this command from the root folder of your Hugo site ie `mynewsite`
+|  |  |
+| --- | --- |
+| `theme-color: black` | `theme-color: red` |
+| <img width="330" alt="black" src="https://cloud.githubusercontent.com/assets/334891/18476835/8d70b330-7999-11e6-8c84-a558906d636e.png"> | <img width="330" alt="red" src="https://cloud.githubusercontent.com/assets/334891/18477185/c53af09a-799a-11e6-9354-b9bf1a7f1826.png"> |
+| `theme-color: white` | `theme-color: gray` |
+| <img width="330" alt="white" src="https://cloud.githubusercontent.com/assets/334891/18477206/d9dc55fc-799a-11e6-89f2-b4ae150caa80.png"> | <img width="330" alt="gray" src="https://cloud.githubusercontent.com/assets/334891/18477058/4e61700c-799a-11e6-80a0-805e57f2563e.png"> |
+| `theme-color: blue` | `theme-color: pink` |
+| <img width="330" alt="blue" src="https://cloud.githubusercontent.com/assets/334891/18477240/f03646d2-799a-11e6-8895-25b37d3a1438.png"> | <img width="330" alt="pink" src="https://cloud.githubusercontent.com/assets/334891/18477252/fb2f5128-799a-11e6-8c8f-e79d9c1884b7.png"> |
+| `theme-color: orange` | `theme-color: yellow` |
+| <img width="330" alt="orange" src="https://cloud.githubusercontent.com/assets/334891/18477265/06e302bc-799b-11e6-970e-6461b2a89c57.png"> | <img width="330" alt="yellow" src="https://cloud.githubusercontent.com/assets/334891/18477278/117347aa-799b-11e6-83a8-f82341c143e0.png"> |
 
-```
-hugo
-```
+## Contributing
 
-For local development run Hugo's built-in local server.
+Bug reports and pull requests are welcome on GitHub at https://github.com/broccolini/swiss. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
-```
-hugo server
-```
+## Development
 
-Now enter [`localhost:1313`](http://localhost:1313) in the address bar of your browser.
+To set up your environment to develop this theme, run `bundle install`.
 
-# Configuration
+You theme is setup just like a normal Jelyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
 
-### Config options
+When your theme is released, only the files in `_layouts`, `_includes`, and `_sass` tracked with Git will be released.
 
-```toml
-# config.toml
-[params]
-  google_analytics_id = ""
-  twitter_handle = "@zerostaticio"
-  showAuthorOnHomepage = true
-  showAuthorOnPosts = false
-  showPostsOnHomepage = false
-  addDot = true
-  addFrame = true
-  highlightColor = '#7b16ff'
-```
+## License
 
-### Google Analytics
-
-Add you google analytics ID to the `config.toml`
-
-```toml
-# config.toml
-[params]
-  google_analytics_id="UA-132398315-1"
-```
-
-# Deploying to Netlify
-
-Use Netlify to deploy this theme. This theme contains a valid and tested `netlify.toml` - Feel free to use the 1-click deploy below.
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/zerostaticthemes/hugo-winston-theme)
-
-This theme includes a `netlify.toml` which is configured to deploy to Netlify from the `exampleSite` folder. See this discussion on how to deploy your site on Netlify from the `exampleSite` folder - https://discourse.gohugo.io/t/deploy-your-theme-to-netlify/15508
-
-Most likely if you are deploying to Netlify and created a new Hugo site or added this theme to an existing Hugo site then you are not deploying from the `exampleSite` directory and you can delete the `netlify.toml` file.
-
-### Other Hugo Themes by Zerostatic
-
-- [Hugo Whisper](https://github.com/zerostaticthemes/hugo-whisper-theme)
-- [Hugo Serif](https://github.com/zerostaticthemes/hugo-serif-theme)
-- [Hugo Winston](https://github.com/zerostaticthemes/hugo-winston-theme)
-- [Hugo Advance](https://www.zerostatic.io/theme/hugo-advance/)
-- [Hugo Paradigm](https://www.zerostatic.io/theme/hugo-paradigm/)
-
-🇦🇺 **Made in Australia** by Robert Austin - leave a star mate!
+The theme is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
