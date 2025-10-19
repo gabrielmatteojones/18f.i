@@ -15,8 +15,8 @@
 # in the templates via {{ site.myvariable }}.
 title: Gabriel Jones
 description: Benvenuti nel mio blog, qui vi racconto di tutto e di più!
-baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://gj-on.github.io" # the base hostname & protocol for your site
+baseurl: "https://18f.it" # the subpath of your site, e.g. /blog
+url: "https://18f.it" # the base hostname & protocol for your site
 github_repo: gj-on.github.io # the GitHub repo name for your project
 github_username: gj-on
 
