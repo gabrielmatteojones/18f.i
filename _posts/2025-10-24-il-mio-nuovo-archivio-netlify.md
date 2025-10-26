@@ -2,7 +2,7 @@
 layout: post
 title: Il mio nuovo archivio
 date: 2025-10-24
-categories: informatica
+categories: Informatica
 ---
 Da anni ho l’abitudine di salvare tutto su una chiavetta USB: i dati dei domini che compro, gli articoli che scrivo, le mie tesi e mille altri file che raccontano il mio percorso. È sempre stato il mio piccolo tesoro digitale, una memoria portatile che cresceva insieme a me.
 
