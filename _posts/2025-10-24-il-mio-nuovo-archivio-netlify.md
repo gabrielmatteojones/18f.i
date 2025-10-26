@@ -14,6 +14,4 @@ Dentro ci sono file e informazioni che risalgono al **2020**, e anche se può se
 Oggi l’archivio conta già **oltre 7000 documenti**, e cresce di giorno in giorno. È un po’ come guardare indietro e vedere quanto ho imparato, quanto ho creato e quanto sono cresciuto.\
 Per me, è un grande successone.
 
-
-
-A﻿rticolo generato parzialmente con l'AI
+_A﻿rticolo generato parzialmente con l'AI_
