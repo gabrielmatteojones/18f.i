@@ -61,25 +61,68 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 10px; /* spazio tra le immagini */
-      flex-wrap: wrap; /* permette il passaggio a più righe su schermi piccoli */
+      gap: 10px;
+      flex-wrap: wrap;
     }
 
-    /* Ogni immagine */
-    .image-container img {
-      width: 100%;
-      aspect-ratio: 1 / 1; /* mantiene forma quadrata */
-      object-fit: cover; /* ritaglia per riempire il quadrato */
-      border-radius: 8px; /* opzionale, angoli arrotondati */
-    }
-
-    /* Layout a 3 colonne su desktop */
+    /* Ogni box immagine */
     .image-box {
+      position: relative;
       flex: 1 1 calc(33.333% - 10px);
       max-width: calc(33.333% - 10px);
+      overflow: hidden;
+      border-radius: 8px;
+      cursor: pointer;
     }
 
-    /* Su schermi piccoli, una sotto l'altra */
+    /* Immagine */
+    .image-box img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      transition: transform 0.4s ease, filter 0.4s ease;
+      display: block;
+    }
+
+    /* Overlay scuro e testo */
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: background-color 0.4s ease, opacity 0.4s ease;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .overlay h3 {
+      margin: 0;
+      font-size: 1.2em;
+    }
+
+    .overlay p {
+      margin: 5px 0 0;
+      font-size: 0.9em;
+      opacity: 0.8;
+    }
+
+    /* Effetto hover */
+    .image-box:hover img {
+      transform: scale(1.1);
+      filter: brightness(0.6);
+    }
+
+    .image-box:hover .overlay {
+      opacity: 1;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    /* Su schermi piccoli */
     @media (max-width: 768px) {
       .image-box {
         flex: 1 1 100%;
@@ -90,15 +133,29 @@
         
         
   <div class="image-container">
-    <div class="image-box">
+    <a href="pagina-foto1.html" class="image-box">
       <img src="https://imgs.search.brave.com/3sNswd9rTsrhe2v10K4vv6xT1lIo5uisdyCVOpD_59Y/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tdXNp/Y3VyYS5pdC93cC1j/b250ZW50L3VwbG9h/ZHMvMjAyNS8wNC9G/ZWRlcmljYUFiYmF0/ZV9mb3RvMi5wbmc" alt="Immagine 1">
-    </div>
-    <div class="image-box">
+      <div class="overlay">
+        <h3>Titolo immagine 1</h3>
+        <p>Autore 1</p>
+      </div>
+    </a>
+
+    <a href="pagina-foto2.html" class="image-box">
       <img src="https://imgs.search.brave.com/3sNswd9rTsrhe2v10K4vv6xT1lIo5uisdyCVOpD_59Y/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tdXNp/Y3VyYS5pdC93cC1j/b250ZW50L3VwbG9h/ZHMvMjAyNS8wNC9G/ZWRlcmljYUFiYmF0/ZV9mb3RvMi5wbmc" alt="Immagine 2">
-    </div>
-    <div class="image-box">
+      <div class="overlay">
+        <h3>Titolo immagine 2</h3>
+        <p>Autore 2</p>
+      </div>
+    </a>
+
+    <a href="pagina-foto3.html" class="image-box">
       <img src="https://imgs.search.brave.com/3sNswd9rTsrhe2v10K4vv6xT1lIo5uisdyCVOpD_59Y/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tdXNp/Y3VyYS5pdC93cC1j/b250ZW50L3VwbG9h/ZHMvMjAyNS8wNC9G/ZWRlcmljYUFiYmF0/ZV9mb3RvMi5wbmc" alt="Immagine 3">
-    </div>
+      <div class="overlay">
+        <h3>Titolo immagine 3</h3>
+        <p>Autore 3</p>
+      </div>
+    </a>
   </div>
 
         
