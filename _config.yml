@@ -27,7 +27,7 @@ social_username: gj-ones
 
 # Set theme color here
 # Choose from: black (default), blue, gray, magenta, orange, red, white, and yellow.
-theme_color: white
+theme_color: bkack
 
 # Build settings
 markdown: kramdown
