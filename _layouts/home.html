@@ -55,6 +55,53 @@
       </header>
 
       <div class="container mx-auto px-2 py-4">
+  <style>
+    /* Contenitore generale */
+    .image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px; /* spazio tra le immagini */
+      flex-wrap: wrap; /* permette il passaggio a più righe su schermi piccoli */
+    }
+
+    /* Ogni immagine */
+    .image-container img {
+      width: 100%;
+      aspect-ratio: 1 / 1; /* mantiene forma quadrata */
+      object-fit: cover; /* ritaglia per riempire il quadrato */
+      border-radius: 8px; /* opzionale, angoli arrotondati */
+    }
+
+    /* Layout a 3 colonne su desktop */
+    .image-box {
+      flex: 1 1 calc(33.333% - 10px);
+      max-width: calc(33.333% - 10px);
+    }
+
+    /* Su schermi piccoli, una sotto l'altra */
+    @media (max-width: 768px) {
+      .image-box {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+    }
+  </style>
+        
+        
+  <div class="image-container">
+    <div class="image-box">
+      <img src="https://imgs.search.brave.com/3sNswd9rTsrhe2v10K4vv6xT1lIo5uisdyCVOpD_59Y/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tdXNp/Y3VyYS5pdC93cC1j/b250ZW50L3VwbG9h/ZHMvMjAyNS8wNC9G/ZWRlcmljYUFiYmF0/ZV9mb3RvMi5wbmc" alt="Immagine 1">
+    </div>
+    <div class="image-box">
+      <img src="https://imgs.search.brave.com/3sNswd9rTsrhe2v10K4vv6xT1lIo5uisdyCVOpD_59Y/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tdXNp/Y3VyYS5pdC93cC1j/b250ZW50L3VwbG9h/ZHMvMjAyNS8wNC9G/ZWRlcmljYUFiYmF0/ZV9mb3RvMi5wbmc" alt="Immagine 2">
+    </div>
+    <div class="image-box">
+      <img src="https://imgs.search.brave.com/3sNswd9rTsrhe2v10K4vv6xT1lIo5uisdyCVOpD_59Y/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tdXNp/Y3VyYS5pdC93cC1j/b250ZW50L3VwbG9h/ZHMvMjAyNS8wNC9G/ZWRlcmljYUFiYmF0/ZV9mb3RvMi5wbmc" alt="Immagine 3">
+    </div>
+  </div>
+
+        
         {% for post in site.posts %}
           {% include post_block.html %}
         {% endfor %}
