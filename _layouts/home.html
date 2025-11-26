@@ -116,21 +116,8 @@
 
 
   <section class="recent-posts">
-    <h2>Altri Post Recenti</h2>
 
-    <div class="posts-grid">
-        {% for post in site.posts offset:1 limit:3 %}
-        <a href="{{ post.url }}" class="post-card">
-            <img src="/assets/hero-image.png" alt="{{ post.title }}">
-            <div class="post-content">
-                <h3>{{ post.title }}</h3>
-                <span class="post-date">{{ post.date | date: "%d %B %Y" }}</span>
-                <p>{{ post.excerpt | strip_html | truncate: 140 }}</p>
-            <a href="/profiles/gabrieljones/" class="read-more">Autore: Gabriel Jones</a>
-            </div>
-        </a>
-        {% endfor %}
-    </div>
+            <a href="/profiles/gabrieljones/blog/" class="read-more">Blog</a>
 </section>
 
   
