@@ -49,112 +49,50 @@
 
 
 
+<!-- ===== COMPONENTE: CONTAINER GENERICO ===== -->
+<div class="container">
+{{ content ]]
+</div>
 
+<style>
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 15px;
+    }
+}
 
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+}
 
-
-
-
-<!-- SEZIONE AREE TEMATICHE -->
-<section class="areas">
-    <h2>Aree Tematiche</h2>
-    <div class="areas-grid">
-        <a href="/aree/grafica/" class="area-btn">
-            <div class="area-icon">🎨</div>
-            <span>Grafica</span>
-        </a>
-        <a href="/aree/foia/" class="area-btn">
-            <div class="area-icon">📄</div>
-            <span>Trasparenza</span>
-        </a>
-        <a href="/aree/informatica/" class="area-btn">
-            <div class="area-icon">💻</div>
-            <span>Informatica</span>
-        </a>
-        <a href="/aree/blog/" class="area-btn">
-            <div class="area-icon">📝</div>
-            <span>Blog & Aggiornamenti</span>
-        </a>
-        <a href="/aree/servizi/" class="area-btn">
-            <div class="area-icon">⚙️</div>
-            <span>Servizi</span>
-        </a>
-        <a href="/aree/educazione/" class="area-btn">
-            <div class="area-icon">🎓</div>
-            <span>Educazione & Istruzione</span>
-        </a>
-        <a href="/aree/cultura/" class="area-btn">
-            <div class="area-icon">📚</div>
-            <span>Cultura & Biblioteconomia</span>
-        </a>
-    </div>
-</section>
-
-
-  <section class="latest-post">
-    <h2>Ultimo Post</h2>
-
-    {% assign latest = site.posts | first %}
-
-    <div class="post-card">
-        <img src="/assets/hero-image.png" alt="{{ latest.title }}">
-        <div class="post-content">
-            <h3>{{ latest.title }}</h3>
-            <span class="post-date">{{ latest.date | date: "%d %B %Y" }}</span>
-            <p>{{ latest.excerpt | strip_html | truncate: 150 }}</p>
-            <a href="/profiles/gabrieljones/" class="read-more">Autore: Gabriel Jones</a>
-            <a href="{{ latest.url }}" class="read-more">Leggi di più</a>
-        </div>
-    </div>
-</section>
-
-
-
-
-
-  <section class="recent-posts">
-    <h2>Altri Post Recenti</h2>
-
-    <div class="posts-grid">
-        {% for post in site.posts offset:1 limit:3 %}
-        <a href="{{ post.url }}" class="post-card">
-            <img src="/assets/hero-image.png" alt="{{ post.title }}">
-            <div class="post-content">
-                <h3>{{ post.title }}</h3>
-                <span class="post-date">{{ post.date | date: "%d %B %Y" }}</span>
-                <p>{{ post.excerpt | strip_html | truncate: 140 }}</p>
-            <a href="/profiles/gabrieljones/" class="read-more">Autore: Gabriel Jones</a>
-            </div>
-        </a>
-        {% endfor %}
-    </div>
-</section>
-
-  
-  
-  
-  
-  
-  
-  
-  <style>
-/* ===== SEZIONE ULTIMI 3 POST ===== */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 5px;
+    }
+}
 </style>
 
-<!-- SEZIONE PROFILO -->
-<section class="profile">
-    <div class="profile-card">
-        <img src="https://2.gravatar.com/avatar/53241b11fb23d653d6c97ab192be4c459ef4201d71bffe0b87f8c09c061c577b?size=512&d=initials" alt="Gabriel Jones">
-        <div class="profile-info">
-            <h2>Gabriel Jones</h2>
-            <p>Creatore, Innovatore, Appassionato di Design e Tecnologia.</p>
-            <a href="/users/gabrieljones/" class="profile-btn">Scopri di più</a>
-        </div>
-    </div>
-</section>
 
 
+
+
+
+
+
+
+
+
+
+    
 <!-- FOOTER -->
 <footer class="site-footer">
     <div class="footer-container">
