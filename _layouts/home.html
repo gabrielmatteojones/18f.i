@@ -1,174 +1,1056 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gabriel Jones</title>
 
-  {% include head.html %}
 
-  <body>
 
-    <div>
 
-      <header class="header-background">
 
-        <div class="clearfix border-bottom-thick header-border">
-          <ul class="list-reset right py-1 header-text font-smoothing">
-            {% for my_page in site.pages %}
-              {% if my_page.title %}
-              <li class="inline-block">
-                <a class="align-middle link-primary header-link mr-2" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
-              </li>
-              {% endif %}
-            {% endfor %}
-          </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+/* ===== AREE TEMATICHE ===== */
+.areas {
+    padding: 80px 120px;
+    text-align: center;
+    background: #f7f7f7;
+}
+
+.areas h2 {
+    font-size: 48px;
+    margin-bottom: 50px;
+    color: #2e2587;
+}
+
+/* ===== GRIGLIA COMPLETA ===== */
+.areas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    align-items: stretch; /* forza le card ad allinearsi verticalmente */
+}
+
+.area-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    padding: 30px;
+    border-radius: 25px;
+    font-size: 20px;
+    color: #2e2587;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    position: relative;
+    overflow: hidden;
+    height: 100%; /* rende tutte le card alte uguali */
+}
+
+.area-btn:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0,0,0,0.15);
+}
+
+.area-btn::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 0%;
+    top: 0;
+    left: -10%;
+    background: linear-gradient(135deg, #fff200, #fbb034);
+    opacity: 0.3;
+    transform: rotate(25deg);
+    transition: all 0.4s ease;
+    z-index: 0;
+}
+
+.area-btn:hover::before {
+    height: 400%;
+}
+
+.area-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+    z-index: 1;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    .areas {
+        padding: 60px 50px;
+    }
+    .areas h2 {
+        font-size: 36px;
+    }
+    .area-btn {
+        font-size: 18px;
+        padding: 25px;
+    }
+    .area-icon {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .areas {
+        padding: 50px 30px;
+    }
+    .areas h2 {
+        font-size: 28px;
+    }
+    .area-btn {
+        font-size: 16px;
+        padding: 20px;
+    }
+    .area-icon {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .areas {
+        padding: 40px 20px;
+    }
+    .areas h2 {
+        font-size: 24px;
+    }
+    .area-btn {
+        font-size: 14px;
+        padding: 15px;
+    }
+    .area-icon {
+        font-size: 28px;
+    }
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+
+/* ===== FONT ===== */
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: white;
+    font-family: 'Anton', sans-serif;
+}
+
+/* ===== BARRA SUPERIORE BLU ===== */
+.topbar {
+    background-color: #2e2587;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    position: relative;
+    z-index: 10;
+}
+
+.name {
+    font-size: 36px;
+    color: white;
+}
+
+/* ===== LOGO SOVRAPPOSTO TRA LE DUE NAVBAR ===== */
+.logo {
+    height: 135px;
+    width: auto;
+    position: absolute;
+    top: calc(90px - 67.5px); /* metà logo sopra la topbar */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+}
+
+/* ===== BOTTONE ACCESSO ===== */
+.accesso {
+    background: #fff200;
+    border: none;
+    padding: 10px 25px;
+    font-size: 28px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    color: black;
+}
+
+/* ===== BARRA INFERIORE GRIGIA ===== */
+.navmenu {
+    background: #dbdbdb;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 120px;
+    position: relative;
+    z-index: 5;
+}
+
+.navmenu ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+
+.navmenu a {
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    .topbar, .navmenu {
+        padding: 0 20px;
+    }
+    .navmenu a {
+        font-size: 24px;
+    }
+    .name {
+        font-size: 28px;
+    }
+    .logo {
+        height: 110px;
+        top: calc(90px - 55px); /* metà logo sopra la topbar */
+    }
+}
+
+@media (max-width: 768px) {
+    .topbar, .navmenu {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 20px;
+    }
+    .topbar {
+        justify-content: center;
+        gap: 10px;
+    }
+    .navmenu {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .navmenu ul {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    .logo {
+        height: 90px;
+        top: calc(90px - 45px);
+    }
+    .accesso {
+        font-size: 22px;
+        padding: 8px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .name {
+        font-size: 22px;
+    }
+    .navmenu a {
+        font-size: 20px;
+    }
+    .logo {
+        height: 70px;
+        top: calc(90px - 35px);
+    }
+}
+
+</style>
+
+</head>
+<body>
+
+    <!-- BARRA SUPERIORE -->
+    <header class="topbar">
+        <div class="left-top">
+            <span class="name">Gabriel Jones</span>
         </div>
 
-        <div class="container mx-auto px-2 mb-2 clearfix header-text">
-          <h1 class="h0 inline-block col-9 sm-width-full py-4 mt-3 header-title">{{ site.title }}</h1>
+        <div class="right-top"><a href="/userlogin/">
+            <button class="accesso">ACCESSO</button>
+        </a></div>
 
-          <div class="clearfix mb-4 py-1">
-            <div class="col-4 sm-width-full left border-top-thin">
-              <div class="table">
-                <div class="inline-block mt-3 mr-1">
-                  {% include dot-accent.html %}
-                </div>
-                <div class="inline-block mt-3 mr-1">
-                  {% include dot-accent.html %}
-                </div>
-                <div class="inline-block mt-3">
-                  {% include github.html %}
-                </div>
-              </div>
-              <!-- Set site description in config.yml -->
-              <p class="h4 lh-condensed font-smoothing mt-2 py-1">{{ site.description }}</p>
-            </div>
+        <!-- LOGO SOVRAPPOSTO -->
+        <img src="/assets/logo.png" class="logo" alt="Logo">
+    </header>
 
-            <div class="col-4 sm-width-full left border-top-thin mt-3 mt-lg-0 ml-lg-4 table">
-                <div class="inline-block mt-3 mr-1">
-                  {% include dot.html %}
-                </div>
-                <div class="inline-block mt-3">
-                  {% include {{ site.social_link | default: "twitter" }}.html %}
-                </div>
-            </div>
-          </div>
+    <!-- BARRA INFERIORE -->
+    <nav class="navmenu">
+        <ul class="nav-left">
+            <li><a href="/aree/foia/">FOIA</a></li>
+            <li><a href="/users/gabrieljones/">ABOUT ME</a></li>
+            <li><a href="/contatti/">CONTACT ME</a></li>
+        </ul>
 
-        </div>
-      </header>
+        <ul class="nav-right">
+            <li><a href="/projects/">Progetti</a></li>
+            <li><a href="/social/">Social</a></li>
+            <li><a href="/service/">Servizi</a></li>
+        </ul>
+    </nav>
 
-      <div class="container mx-auto px-2 py-4">
-  <style>
-    /* Contenitore generale */
-    .image-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
 
-    /* Ogni box immagine */
-    .image-box {
-      position: relative;
-      flex: 1 1 calc(33.333% - 10px);
-      max-width: calc(33.333% - 10px);
-      overflow: hidden;
-      border-radius: 8px;
-      cursor: pointer;
-    }
 
-    /* Immagine */
-    .image-box img {
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-      transition: transform 0.4s ease, filter 0.4s ease;
-      display: block;
-    }
 
-    /* Overlay scuro e testo */
-    .overlay {
-      position: absolute;
-      inset: 0;
-      background-color: rgba(0, 0, 0, 0);
-      color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      opacity: 0;
-      transition: background-color 0.4s ease, opacity 0.4s ease;
-      text-align: center;
-      padding: 10px;
-    }
 
-    .overlay h3 {
-      margin: 0;
-      font-size: 1.2em;
-    }
 
-    .overlay p {
-      margin: 5px 0 0;
-      font-size: 0.9em;
-      opacity: 0.8;
-    }
 
-    /* Effetto hover */
-    .image-box:hover img {
-      transform: scale(1.1);
-      filter: brightness(0.6);
-    }
 
-    .image-box:hover .overlay {
-      opacity: 1;
-      background-color: rgba(0, 0, 0, 0.4);
-    }
 
-    /* Su schermi piccoli */
-    @media (max-width: 768px) {
-      .image-box {
-        flex: 1 1 100%;
-        max-width: 100%;
-      }
-    }
-  </style>
-        
-    <h1>Halloween Collection</h1><br>
-  <div class="image-container">
-    <a href="https://18f.it/graphics/2025/10/30/halloween-photos-collection2025/" class="image-box">
-      <img src="https://18f.it/assets/1.jpeg" alt="Immagine 1">
-      <div class="overlay">
-        <h3>Halloween Collection</h3>
-        <p><b>By:</b> Gabriel Jones</p>
-      </div>
-    </a>
 
-    <a href="https://18f.it/graphics/2025/10/30/halloween-photos-collection2025/" class="image-box">
-      <img src="https://18f.it/assets/2.jpeg" alt="Immagine 2">
-      <div class="overlay">
-        <h3>Halloween Collection</h3>
-        <p><b>By:</b> Gabriel Jones</p>
-      </div>
-    </a>
 
-    <a href="https://18f.it/graphics/2025/10/30/halloween-photos-collection2025/" class="image-box">
-      <img src="https://18f.it/assets/uploads/whatsapp-image-2025-10-30-at-17.42.06.jpeg" alt="Immagine 3">
-      <div class="overlay">
-        <h3>Halloween Collection</h3>
-        <p><b>By:</b> Gabriel Jones</p>
-      </div>
-    </a>
-  </div>
 
-    <h1>Blog</h1>
-        
-        {% for post in site.posts %}
-          {% include post_block.html %}
-        {% endfor %}
-      </div>
 
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Benvenuti nel mondo di Gabriel Jones</h1>
+        <p>Scopri i miei progetti, servizi e passioni creative. Un viaggio tra innovazione e design.</p>
+        <a href="/projects/"><button class="hero-btn">Esplora i Progetti</button></a>
     </div>
+    <div class="hero-image">
+        <img src="/assets/hero-image.png" alt="Hero Image">
+    </div>
+</section>
 
-    {% include footer.html %}
+<style>
+/* ===== HERO ===== */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 120px;
+    background: linear-gradient(135deg, #2e2587 0%, #6a5acd 100%);
+    color: white;
+    gap: 50px;
+}
 
-  </body>
+.hero-content {
+    max-width: 600px;
+}
 
+.hero-content h1 {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.hero-btn {
+    background: #fff200;
+    color: black;
+    border: none;
+    padding: 15px 40px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.hero-btn:hover {
+    transform: scale(1.05);
+}
+
+.hero-image img {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+/* ===== RESPONSIVE HERO ===== */
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 80px 50px;
+    }
+    .hero-content h1 {
+        font-size: 48px;
+    }
+    .hero-content p {
+        font-size: 20px;
+    }
+    .hero-btn {
+        font-size: 20px;
+        padding: 12px 30px;
+    }
+    .hero-image img {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 36px;
+    }
+    .hero-content p {
+        font-size: 18px;
+    }
+    .hero-image img {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 60px 20px;
+        gap: 30px;
+    }
+    .hero-content h1 {
+        font-size: 28px;
+    }
+    .hero-content p {
+        font-size: 16px;
+    }
+    .hero-btn {
+        font-size: 16px;
+        padding: 10px 25px;
+    }
+    .hero-image img {
+        max-width: 250px;
+    }
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- SEZIONE AREE TEMATICHE -->
+<section class="areas">
+    <h2>Aree Tematiche</h2>
+    <div class="areas-grid">
+        <a href="/aree/grafica/" class="area-btn">
+            <div class="area-icon">🎨</div>
+            <span>Grafica</span>
+        </a>
+        <a href="/aree/foia/" class="area-btn">
+            <div class="area-icon">📄</div>
+            <span>Trasparenza</span>
+        </a>
+        <a href="/aree/informatica/" class="area-btn">
+            <div class="area-icon">💻</div>
+            <span>Informatica</span>
+        </a>
+        <a href="/aree/blog/" class="area-btn">
+            <div class="area-icon">📝</div>
+            <span>Blog & Aggiornamenti</span>
+        </a>
+        <a href="/aree/servizi/" class="area-btn">
+            <div class="area-icon">⚙️</div>
+            <span>Servizi</span>
+        </a>
+        <a href="/aree/educazione/" class="area-btn">
+            <div class="area-icon">🎓</div>
+            <span>Educazione & Istruzione</span>
+        </a>
+        <a href="/aree/cultura/" class="area-btn">
+            <div class="area-icon">📚</div>
+            <span>Cultura & Biblioteconomia</span>
+        </a>
+    </div>
+</section>
+
+<style>
+/* ===== SEZIONE ULTIMO POST ===== */
+.latest-post {
+    padding: 80px 120px;
+    background: #fff;
+    text-align: center;
+}
+
+.latest-post h2 {
+    font-size: 48px;
+    margin-bottom: 50px;
+    color: #2e2587;
+}
+
+.post-card {
+    display: flex;
+    align-items: stretch;
+    gap: 40px;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 35px rgba(0,0,0,0.15);
+}
+
+.post-card img {
+    width: 50%;
+    object-fit: cover;
+}
+
+.post-content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.post-content h3 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #2e2587;
+}
+
+.post-date {
+    font-size: 16px;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.post-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    color: #333;
+}
+
+.read-more {
+    display: inline-block;
+    background: #fff200;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px 30px;
+    border-radius: 25px;
+    transition: transform 0.3s ease;
+}
+
+.read-more:hover {
+    transform: scale(1.05);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    .latest-post {
+        padding: 60px 50px;
+    }
+    .latest-post h2 {
+        font-size: 36px;
+    }
+    .post-card {
+        flex-direction: column;
+    }
+    .post-card img {
+        width: 100%;
+        height: 300px;
+    }
+    .post-content h3 {
+        font-size: 28px;
+    }
+    .post-content p {
+        font-size: 16px;
+    }
+    .read-more {
+        padding: 10px 25px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .latest-post {
+        padding: 40px 20px;
+    }
+    .latest-post h2 {
+        font-size: 28px;
+    }
+    .post-content h3 {
+        font-size: 22px;
+    }
+    .post-content p {
+        font-size: 14px;
+    }
+    .read-more {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+}
+</style>
+
+  <section class="latest-post">
+    <h2>Ultimo Post</h2>
+
+    {% assign latest = site.posts | first %}
+
+    <div class="post-card">
+        <img src="{{ latest.image }}" alt="{{ latest.title }}">
+        <div class="post-content">
+            <h3>{{ latest.title }}</h3>
+            <span class="post-date">{{ latest.date | date: "%d %B %Y" }}</span>
+            <p>{{ latest.excerpt | strip_html | truncate: 150 }}</p>
+            <a href="{{ latest.url }}" class="read-more">Leggi di più</a>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+  <section class="recent-posts">
+    <h2>Altri Post Recenti</h2>
+
+    <div class="posts-grid">
+        {% for post in site.posts offset:1 limit:3 %}
+        <a href="{{ post.url }}" class="post-card">
+            <img src="{{ post.image }}" alt="{{ post.title }}">
+            <div class="post-content">
+                <h3>{{ post.title }}</h3>
+                <span class="post-date">{{ post.date | date: "%d %B %Y" }}</span>
+                <p>{{ post.excerpt | strip_html | truncate: 140 }}</p>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</section>
+
+  
+  
+  
+  
+  
+  
+  
+  <style>
+/* ===== SEZIONE ULTIMI 3 POST ===== */
+.recent-posts {
+    padding: 80px 120px;
+    background: #f7f7f7;
+    text-align: center;
+}
+
+.recent-posts h2 {
+    font-size: 48px;
+    margin-bottom: 50px;
+    color: #2e2587;
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    align-items: stretch;
+}
+
+.post-card {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    text-decoration: none;
+    color: #2e2587;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.post-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0,0,0,0.15);
+}
+
+.post-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.post-content {
+    padding: 20px 25px 30px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.post-content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #2e2587;
+}
+
+.post-date {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+.post-content p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.4;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    .recent-posts {
+        padding: 60px 50px;
+    }
+    .recent-posts h2 {
+        font-size: 36px;
+    }
+    .post-content h3 {
+        font-size: 20px;
+    }
+    .post-content p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
+    .post-card img {
+        height: 250px;
+    }
+    .post-content h3 {
+        font-size: 18px;
+    }
+    .post-content p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .recent-posts {
+        padding: 40px 20px;
+    }
+    .recent-posts h2 {
+        font-size: 28px;
+    }
+    .post-card img {
+        height: 200px;
+    }
+    .post-content h3 {
+        font-size: 16px;
+    }
+    .post-content p {
+        font-size: 13px;
+    }
+}
+</style>
+
+<!-- SEZIONE PROFILO -->
+<section class="profile">
+    <div class="profile-card">
+        <img src="https://2.gravatar.com/avatar/53241b11fb23d653d6c97ab192be4c459ef4201d71bffe0b87f8c09c061c577b?size=512&d=initials" alt="Gabriel Jones">
+        <div class="profile-info">
+            <h2>Gabriel Jones</h2>
+            <p>Creatore, Innovatore, Appassionato di Design e Tecnologia.</p>
+            <a href="/users/gabrieljones/" class="profile-btn">Scopri di più</a>
+        </div>
+    </div>
+</section>
+
+<style>
+/* ===== SEZIONE PROFILO ===== */
+.profile {
+    padding: 80px 120px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    background: #f7f7f7;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    padding: 40px 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 35px rgba(0,0,0,0.15);
+}
+
+.profile-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 25px;
+    border: 4px solid #2e2587;
+}
+
+.profile-info h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #2e2587;
+}
+
+.profile-info p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.profile-btn {
+    background: #fff200;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px 35px;
+    border-radius: 25px;
+    transition: transform 0.3s ease;
+}
+
+.profile-btn:hover {
+    transform: scale(1.05);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    .profile {
+        padding: 60px 50px;
+    }
+    .profile-info h2 {
+        font-size: 28px;
+    }
+    .profile-info p {
+        font-size: 16px;
+    }
+    .profile-btn {
+        padding: 10px 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile {
+        padding: 40px 20px;
+    }
+    .profile-info h2 {
+        font-size: 24px;
+    }
+    .profile-info p {
+        font-size: 14px;
+    }
+    .profile-btn {
+        padding: 8px 25px;
+        font-size: 14px;
+    }
+}
+</style>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <img src="https://gabrieljones.it/assets/logo.png" alt="Logo">
+            <span>Gabriel Jones</span>
+        </div>
+        <ul class="footer-links">
+            <li><a href="/users/gabrieljones/">About Me</a></li>
+            <li><a href="/contatti/">Contatti</a></li>
+            <li><a href="/projects/">Progetti</a></li>
+            <li><a href="/social/">Social</a></li>
+        </ul>
+        <div class="footer-social">
+            <a href="#"><img src="https://img.icons8.com/ios-filled/30/ffffff/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="https://img.icons8.com/ios-filled/30/ffffff/twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="https://img.icons8.com/ios-filled/30/ffffff/instagram-new.png" alt="Instagram"></a>
+            <a href="#"><img src="https://img.icons8.com/ios-filled/30/ffffff/linkedin.png" alt="LinkedIn"></a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2025 Gabriel Jones. Tutti i diritti riservati.
+    </div>
+</footer>
+
+<style>
+/* ===== FOOTER ===== */
+.site-footer {
+    background: #2e2587;
+    color: white;
+    padding: 50px 120px 20px 120px;
+    font-family: 'Anton', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 24px;
+}
+
+.footer-brand img {
+    height: 60px;
+    width: auto;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #fff200;
+}
+
+.footer-social {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-social img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.footer-social img:hover {
+    transform: scale(1.2);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 16px;
+    color: #ccc;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    .site-footer {
+        padding: 40px 50px 20px 50px;
+    }
+    .footer-links {
+        gap: 15px;
+    }
+    .footer-links a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+    .footer-social {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-footer {
+        padding: 30px 20px 15px 20px;
+    }
+    .footer-brand {
+        font-size: 20px;
+    }
+    .footer-links a {
+        font-size: 14px;
+    }
+    .footer-social img {
+        width: 25px;
+        height: 25px;
+    }
+    .footer-bottom {
+        font-size: 14px;
+    }
+}
+</style>
+
+</body>
 </html>
