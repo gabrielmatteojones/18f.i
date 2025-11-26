@@ -1,13 +1,71 @@
 ---
 layout: default
 ---
-<article class="container mx-auto px-2 mt2 mb4">
+
+<article class="container mx-auto px-2 mt-2 mb-4">
   <header>
     <h1 class="h0 py-4 mt-3">{{ page.title }}</h1>
   </header>
   <div class="col-4 sm-width-full border-top-thin">
+    <!-- Eventuali metadati o autore -->
   </div>
   <div class="prose mb-4 py-4">
     {{ content }}
   </div>
 </article>
+
+<style>
+/* Stile articolo */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+}
+
+.h0 {
+    font-size: 48px;
+    color: #2e2587;
+    margin-bottom: 20px;
+}
+
+.border-top-thin {
+    border-top: 2px solid #2e2587;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+.prose {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #444;
+}
+
+.prose p {
+    margin-bottom: 20px;
+}
+
+.prose img {
+    max-width: 100%;
+    border-radius: 15px;
+    margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+    .h0 {
+        font-size: 36px;
+    }
+    .prose {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .h0 {
+        font-size: 28px;
+    }
+    .prose {
+        font-size: 14px;
+    }
+}
+</style>
