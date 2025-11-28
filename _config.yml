@@ -31,3 +31,7 @@ theme_color: blue
 
 # Build settings
 markdown: kramdown
+
+collections:
+  foia:
+    output: true

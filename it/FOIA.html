@@ -1,0 +1,41 @@
+---
+title: FOIA
+layout: default
+permalink: /FOIA/
+---
+<section id="foia-documents" class="py-24 bg-background">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-serif font-bold text-primary mb-4">Documenti FOIA</h2>
+      <p class="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">Elenco dei documenti con organizzazione competente.</p>
+    </div>
+
+    <div class="overflow-x-auto">
+      <table class="min-w-full border border-gray-200 divide-y divide-gray-200">
+        <thead class="bg-gray-100">
+          <tr>
+            <th class="px-6 py-3 text-left text-sm font-semibold text-gray-700">Nome Documento</th>
+            <th class="px-6 py-3 text-left text-sm font-semibold text-gray-700">Organizzazione Competente</th>
+          </tr>
+        </thead>
+        <tbody class="bg-white divide-y divide-gray-200">
+          {% assign foia_posts = site.foia %}
+          {% for post in foia_posts %}
+          <tr>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+              <a href="{{ post.url }}" class="text-blue-600 hover:underline">{{ post.title }}</a>
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">
+              {% if post.organizzazione %}
+                {{ post.organizzazione }}
+              {% else %}
+                Non specificata
+              {% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
