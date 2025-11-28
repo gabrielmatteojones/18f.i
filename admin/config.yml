@@ -22,3 +22,15 @@ collections:
       - { label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
       - { label: "Categoria", name: "categories", widget: "string" }
       - { label: "Content", name: "body", widget: "markdown" }
+  - name: "page"
+    label: "page"
+    folder: "_pages"
+    create: true
+    slug: "{{slug}}-netlify"
+    format: "yaml-frontmatter"
+    extension: "md"
+    preview_path: "{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
+      - { label: "Titolo", name: "title", widget: "string" }
+      - { label: "Content", name: "body", widget: "markdown" }
