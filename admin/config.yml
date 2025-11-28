@@ -33,4 +33,5 @@ collections:
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
       - { label: "Titolo", name: "title", widget: "string" }
+      - { label: "Permalink", name: "Permalink", widget: "string" }
       - { label: "Content", name: "body", widget: "markdown" }
