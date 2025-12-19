@@ -80,7 +80,7 @@
 
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      window.location.href = "/dashboard.html";
+      window.location.href = "/admin/";
     } catch (error) {
       alert("Email o password errati");
       console.error(error);
