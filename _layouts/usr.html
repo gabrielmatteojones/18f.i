@@ -1,0 +1,150 @@
+---
+layout: default
+title: {{ page.title }}
+permalink: {{ page.url }}
+---
+<section class="section bg-petrol py-3 py-lg-3 py-xl-5">
+  <div class="container">
+    <div class="row variable-gutters">
+      <div class="col-12 col-sm-3 col-lg-3 d-none d-sm-block">
+        <div class="section-thumb thumb-large mx-3">
+          <img alt="logo della repubblica italiana" src="{{ site.baseurl }}/assets/placeholders/logo-service.png">
+        </div><!-- /section-thumb -->
+      </div><!-- /col-lg-2 -->
+      <div class="col-12 col-sm-9 col-md-8 col-lg-8 offset-lg-1 d-flex align-items-center">
+        <div class="section-title">
+          <h2 class="mb-3">{{ page.name }}</h2>
+          <p>Docente di: <strong>{{ page.school_level }}</strong></p>
+        </div><!-- /title-section -->
+      </div><!-- /col-lg-5 col-md-8 -->
+    </div><!-- /row -->
+  </div><!-- /container -->
+</section><!-- /section -->
+
+<section class="section bg-white">
+  <div class="container container-border-top">
+    <div class="row variable-gutters">
+      <div class="col-lg-3 col-md-4 aside-border px-0">
+        <aside class="aside-main aside-sticky">
+          <div class="aside-title" id="people-detail">
+            <a class="toggle-link-list" data-toggle="collapse" href="#lista-paragrafi" role="button"
+              aria-expanded="true" aria-controls="lista-paragrafi"
+              aria-label="apri / chiudi dettagli della persona">
+              <span>Dettagli della persona</span>
+              <svg class="icon icon-toggle svg-arrow-down-small">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-arrow-down-small"></use>
+              </svg>
+            </a>
+          </div>
+          <div id="lista-paragrafi" class="link-list-wrapper collapse show" role="region"
+            aria-labelledby="people-detail" aria-label="">
+            <ul class="link-list">
+              <li>
+                <a class="list-item scroll-anchor-offset" href="#art-par-01">Biografia</a>
+              </li>
+              <li>
+                <a class="list-item scroll-anchor-offset" href="#art-par-04">Documenti</a>
+              </li>
+              <li>
+                <a class="list-item scroll-anchor-offset" href="#art-par-05">Ulteriori informazioni</a>
+              </li>
+              <li>
+                <a class="list-item scroll-anchor-offset" href="#art-par-06">Contatti</a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+      </div><!-- /col-lg-3 -->
+      <div class="col-lg-8 col-md-8 offset-lg-1 pt84">
+        <article class="article-wrapper">
+          <h2 class="h4" id="art-par-01">Biografia</h2>
+          <div class="row variable-gutters">
+            <div class="col-lg-9">
+              <p>{{ page.biography }}</p>
+            </div><!-- /col-lg-9 -->
+          </div><!-- /row -->
+          <h2 class="h4" id="art-par-02" class="mb-4">Didattica</h2>
+          <h3 class="h5">Materie</h3>
+          <div class="row variable-gutters">
+            <div class="col-lg-12">
+              <div class="card-deck card-deck-spaced mb-4">
+                {% for subject in page.subjects %}
+                <div class="card card-bg card-bg-simple rounded">
+                  <div class="card-body">
+                    <p>{{ subject.name }}</p>
+                    <small>{{ subject.class }} - {{ subject.school }}</small>
+                  </div><!-- /card-body -->
+                </div><!-- /card -->
+                {% endfor %}
+              </div><!-- /card-deck -->
+            </div><!-- /col-lg-12 -->
+          </div><!-- /row -->
+          <h3 id="art-par-progetti" class="h5 mb-4">Progetti</h3>
+          <div class="row variable-gutters mb-4">
+            <div class="col-lg-12">
+              <div class="card-deck card-deck-spaced">
+                {% for project in page.projects %}
+                <div class="card card-bg card-icon rounded">
+                  <a href="{{ project.url }}">
+                    <div class="card-body">
+                      <svg class="icon svg-project">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-project"></use>
+                      </svg>
+                      <div class="card-icon-content">
+                        <p class="mb-2"><strong>{{ project.name }}</strong></p>
+                        <p class="mb-1">{{ project.description }}</p>
+                      </div><!-- /card-icon-content -->
+                    </div><!-- /card-body -->
+                  </a>
+                </div><!-- /card -->
+                {% endfor %}
+              </div><!-- /card-deck -->
+            </div><!-- /col-lg-12 -->
+          </div><!-- /row -->
+          <h2 id="art-par-04" class="h4 mb-4">Documenti</h2>
+          <div class="row variable-gutters mb-4">
+            <div class="col-lg-12">
+              <div class="card-deck card-deck-spaced">
+                {% for document in page.documents %}
+                <div class="card card-bg card-icon rounded">
+                  <div class="card-body">
+                    <svg class="icon it-pdf-document">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#it-pdf-document"></use>
+                    </svg>
+                    <div class="card-icon-content">
+                      <p><strong><a href="{{ document.url }}">{{ document.title }}</a></strong></p>
+                    </div><!-- /card-icon-content -->
+                  </div><!-- /card-body -->
+                </div><!-- /card -->
+                {% endfor %}
+              </div><!-- /card-deck -->
+            </div><!-- /col-lg-12 -->
+          </div><!-- /row -->
+          <h2 id="art-par-05" class="h4 mb-4">Ulteriori informazioni</h2>
+          <div class="row variable-gutters">
+            <div class="col-lg-9">
+              <p>{{ page.additional_info }}</p>
+            </div><!-- /col-lg-9 -->
+          </div><!-- /row -->
+          <h2 class="h4" id="art-par-06">Contatti</h2>
+          <div class="row variable-gutters">
+            <div class="col-lg-9">
+              <ul>
+                <li><strong>Email:</strong> <a href="mailto:{{ page.email }}">{{ page.email }} | Email protetta da certificazione interna.</a></li>
+                <li><strong>Email ufficiale:</strong> <a href="mailto:tsms8268sb@ts.upid.it">tsms8268sb@ts.upid.it</a></li>
+              </ul>
+            </div><!-- /col-lg-9 -->
+          </div><!-- /row -->
+          <div class="row variable-gutters">
+            <div class="col-lg-9">
+              <div class="article-footer">
+                <p><strong>Pubblicato:</strong> {{ page.date | date: '%d.%m.%Y' }} <span>-</span> <strong>Revisione:</strong> {{ page.revision_date | date: '%d.%m.%Y' }}</p>
+                <p>Eccetto dove diversamente specificato, questo articolo è stato rilasciato sotto Licenza Creative Commons Attribuzione 4.0 Italia.</p>
+              </div><!-- /article-footer -->
+            </div><!-- /col-lg-9 -->
+          </div><!-- /row -->
+        </article>
+      </div><!-- /col-lg-8 -->
+    </div><!-- /row -->
+  </div><!-- /container -->
+</section><!-- /section -->

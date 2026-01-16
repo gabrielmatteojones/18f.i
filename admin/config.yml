@@ -1,32 +1,31 @@
 backend:
   name: git-gateway
-  branch: develop
+  branch: dependabot/bundler/addressable-2.8.1 # La tua branch principale, solitamente 'main' o 'master'
 
-publish_mode: editorial_workflow
-
-media_folder: "assets/uploads"
-public_folder: "/assets/uploads"
+media_folder: "assets" # Dove saranno caricate le immagini
+public_folder: "/assets" # Path pubblico per le immagini
 
 collections:
-  - name: "posts"
-    label: "Post"
-    folder: "_posts"
+  - name: "books"
+    label: "Books"
+    folder: "_book"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}-gjones"
-    format: "yaml-frontmatter"
-    extension: "md"
-    preview_path: "blog/{{slug}}"
+    slug: "{{slug}}"
     fields:
-      - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
-      - { label: "Titolo", name: "title", widget: "string" }
-      - { label: "Data", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
-      - { label: "Categoria", name: "categories", widget: "string" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Author", name: "author", widget: "string" }
+      - { label: "ISBN", name: "isbn", widget: "string" }
+      - { label: "Category", name: "category", widget: "string" }
+      - { label: "Data", name: "datapub", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "Dewey Number", name: "dewey", widget: "string" }
+      - { label: "Cover Image", name: "copertina", widget: "image" }
       - { label: "Content", name: "body", widget: "markdown" }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "libri" }
   - name: "page"
     label: "page"
-    folder: "_pages"
+    folder: "pages"
     create: true
-    slug: "{{slug}}-gjones"
+    slug: "{{slug}}"
     format: "yaml-frontmatter"
     extension: "md"
     preview_path: "{{slug}}"

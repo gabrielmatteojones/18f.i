@@ -1,62 +1,41 @@
-# :construction: WIP :construction: Swiss Jekyll Theme
+# Design Jekyll Theme
 
-Swiss is a bold Jekyll theme inspired by Swiss design and the works of Massimo Vignelli. This theme lends itself well to sites heavy on written content.
+A Jekyll theme based on the [UI Kit](https://github.com/italia/design-ui-kit)
+and built with [Bootstrap Italia](https://github.com/italia/bootstrap-italia/).
 
-### Features:
-* Mobile-first design ensures this theme performs fastest on mobile while scaling elegantly to desktop-size screens.
-* Designed for blogs and sites heavy on written content, with bold typography styles, homepage summaries, and previous/next snippets.
-* Supports a wide range of HTML elements and markdown.
-* Flexible styles that can be reused for customization without adding additional CSS.
-* Dynamically generated navigation links. See docs for adding pages with specific post category for-loops.
+## Getting started
 
-## Installation
+The theme itself is a starting point for a Jekyll-based website. You can refer
+to the [official Jekyll docs](https://jekyllrb.com/docs/) for further details
+on how to install it locally.
 
-Add this line to your Jekyll site's Gemfile:
+If you already have `bundler` installed, you can install jekyll and budler gems
+with:
 
-```ruby
-gem "jekyll-swiss"
-```
+`bundle install`
 
-And add this line to your Jekyll site:
+However, if you want to install the dependencies locally you can run:
 
-```yaml
-theme: jekyll-swiss
-```
+`bundle install --path vendor/bundle`
 
-And then execute:
+You can build the site and make it available on a local server with:
 
-    $ bundle
+`bundle exec jekyll serve --config {_config.yml, _config_dev.yml}`
 
-Or install it yourself as:
+picking one of the two config files where:
 
-    $ gem install jekyll-swiss
+*  _config.yml is the production file
+*  _config_dev.yml is the development file.
 
-## Usage
-This theme comes in eight different color variations. The default is set to the black theme, to change to a different theme edit the config under `theme-color: black` to one of the following colors:
+### Notes
 
-|  |  |
-| --- | --- |
-| `theme-color: black` | `theme-color: red` |
-| <img width="330" alt="black" src="https://cloud.githubusercontent.com/assets/334891/18476835/8d70b330-7999-11e6-8c84-a558906d636e.png"> | <img width="330" alt="red" src="https://cloud.githubusercontent.com/assets/334891/18477185/c53af09a-799a-11e6-9354-b9bf1a7f1826.png"> |
-| `theme-color: white` | `theme-color: gray` |
-| <img width="330" alt="white" src="https://cloud.githubusercontent.com/assets/334891/18477206/d9dc55fc-799a-11e6-89f2-b4ae150caa80.png"> | <img width="330" alt="gray" src="https://cloud.githubusercontent.com/assets/334891/18477058/4e61700c-799a-11e6-80a0-805e57f2563e.png"> |
-| `theme-color: blue` | `theme-color: pink` |
-| <img width="330" alt="blue" src="https://cloud.githubusercontent.com/assets/334891/18477240/f03646d2-799a-11e6-8895-25b37d3a1438.png"> | <img width="330" alt="pink" src="https://cloud.githubusercontent.com/assets/334891/18477252/fb2f5128-799a-11e6-8c8f-e79d9c1884b7.png"> |
-| `theme-color: orange` | `theme-color: yellow` |
-| <img width="330" alt="orange" src="https://cloud.githubusercontent.com/assets/334891/18477265/06e302bc-799b-11e6-970e-6461b2a89c57.png"> | <img width="330" alt="yellow" src="https://cloud.githubusercontent.com/assets/334891/18477278/117347aa-799b-11e6-83a8-f82341c143e0.png"> |
+You can run the server just with `bundle exec jekyll serve`: the webiste will
+be available on http://localhost:4000/design-jeyll-theme. This is the default
+settings to allow usage with GitHub pages.
 
-## Contributing
+The aforementioned addition of `_config_dev.yml` is needed to run the server on
+http://localhost:4000 without any subpath.
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/broccolini/swiss. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
-## Development
-
-To set up your environment to develop this theme, run `bundle install`.
-
-You theme is setup just like a normal Jelyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
-
-When your theme is released, only the files in `_layouts`, `_includes`, and `_sass` tracked with Git will be released.
-
-## License
-
-The theme is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+# License
+This repository is licensed with a BSD-3-Clause license. Please check the
+[LICENSE](LICENSE) file to know more details about this.
