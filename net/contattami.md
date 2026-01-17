@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Contattami!
+title: "Contattami!"
 Permalink: /contact/
 ---
 Heyy! Come va?
