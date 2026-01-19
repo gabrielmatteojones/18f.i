@@ -1,0 +1,71 @@
+---
+layout: default
+---
+
+  <style>
+    .welcome-title {
+      color: #d63a1f; /* rosso simile all’originale */
+      font-weight: 700;
+    }
+
+    .welcome-border {
+      border-left: 6px solid #d63a1f;
+      padding-left: 2rem;
+    }
+
+    .image-grid img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 0.25rem;
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: 1fr;
+      gap: 1rem;
+    }
+  </style>
+
+  <main class="container my-5">
+    <div class="row g-5 align-items-start">
+
+      <!-- Testo -->
+      <div class="col-lg-7">
+        <div class="welcome-border">
+          <h1 class="welcome-title mb-4">WELCOME</h1>
+
+          <p class="lead">
+            Do you want to read adventure stories? Are you interested in history?
+            How about getting both and sneaking in some stealth-learning too?
+            If so you have come to the right place.
+          </p>
+
+          <p>
+            The greatest challenge is capturing a child’s attention and imagination,
+            once you have that there is so much you can do. We have loads of resources
+            here to help fire up the imagination and feed their curiosity.
+            Whether you are a teacher searching for detailed curriculum plans
+            and resources, or a parent looking for ideas and fun activities,
+            we have a huge range of ideas and materials.
+          </p>
+
+          <p class="fw-bold mt-4">
+            Come on in and join us!
+          </p>
+        </div>
+      </div>
+
+      <!-- Immagini -->
+      <div class="col-lg-5">
+        <div class="image-grid">
+          <img src="img/img1.jpg" alt="Illustrazione 1">
+          <img src="img/img2.jpg" alt="Illustrazione 2">
+          <img src="img/img3.jpg" alt="Illustrazione 3">
+          <img src="img/img4.jpg" alt="Illustrazione 4">
+        </div>
+      </div>
+
+    </div>
+  </main>
