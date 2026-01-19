@@ -6,6 +6,8 @@ environment: "production"
 #
 # Flags below are optional
 #
+title: "Gabriel Jones"
+
 
 # Prevent site from being indexed by search engines
 # Leave empty to publish the website
