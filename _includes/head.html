@@ -3,9 +3,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>
-    {% if page.title == "Home" %}
-      {{ site.title }}{% if site.tagline %} &middot; {{ site.tagline }}{% endif %}
-    {% else %}
       {{ page.title }} &middot; {{ site.title }}
     {% endif %}
   </title>
@@ -15,5 +12,4 @@
   <link rel="shortcut icon" href="{{ '/assets/favicon.ico' | relative_url }}">
   <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ 'atom.xml' | relative_url }}">
 
-  {% seo title=false %}
 </head>
