@@ -10,5 +10,888 @@
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ '/assets/apple-touch-icon-precomposed.png' | relative_url }}">
   <link rel="shortcut icon" href="{{ '/assets/favicon.ico' | relative_url }}">
   <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ 'atom.xml' | relative_url }}">
+<style id='wp-img-auto-sizes-contain-inline-css'>
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id='wp-emoji-styles-inline-css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id='wp-block-library-inline-css'>
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}.has-text-align-center{text-align:center}.has-text-align-left{text-align:left}.has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=wp-block-library-inline-css */
+</style><style id='global-styles-inline-css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--accent: #e22658;--wp--preset--color--primary: #000000;--wp--preset--color--secondary: #6d6d6d;--wp--preset--color--subtle-background: #dbdbdb;--wp--preset--color--background: #ffffff;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 18px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 26.25px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--normal: 21px;--wp--preset--font-size--larger: 32px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<style id='classic-theme-styles-inline-css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<link rel='stylesheet' id='twentytwenty-style-css' href='https://largeheartedboy.com/wp-content/themes/twentytwenty/style.css?ver=2.1' media='all' />
+<style id='twentytwenty-style-inline-css'>
+.color-accent,.color-accent-hover:hover,.color-accent-hover:focus,:root .has-accent-color,.has-drop-cap:not(:focus):first-letter,.wp-block-button.is-style-outline,a { color: #e22658; }blockquote,.border-color-accent,.border-color-accent-hover:hover,.border-color-accent-hover:focus { border-color: #e22658; }button,.button,.faux-button,.wp-block-button__link,.wp-block-file .wp-block-file__button,input[type="button"],input[type="reset"],input[type="submit"],.bg-accent,.bg-accent-hover:hover,.bg-accent-hover:focus,:root .has-accent-background-color,.comment-reply-link { background-color: #e22658; }.fill-children-accent,.fill-children-accent * { fill: #e22658; }:root .has-background-color,button,.button,.faux-button,.wp-block-button__link,.wp-block-file__button,input[type="button"],input[type="reset"],input[type="submit"],.wp-block-button,.comment-reply-link,.has-background.has-primary-background-color:not(.has-text-color),.has-background.has-primary-background-color *:not(.has-text-color),.has-background.has-accent-background-color:not(.has-text-color),.has-background.has-accent-background-color *:not(.has-text-color) { color: #ffffff; }:root .has-background-background-color { background-color: #ffffff; }body,.entry-title a,:root .has-primary-color { color: #000000; }:root .has-primary-background-color { background-color: #000000; }cite,figcaption,.wp-caption-text,.post-meta,.entry-content .wp-block-archives li,.entry-content .wp-block-categories li,.entry-content .wp-block-latest-posts li,.wp-block-latest-comments__comment-date,.wp-block-latest-posts__post-date,.wp-block-embed figcaption,.wp-block-image figcaption,.wp-block-pullquote cite,.comment-metadata,.comment-respond .comment-notes,.comment-respond .logged-in-as,.pagination .dots,.entry-content hr:not(.has-background),hr.styled-separator,:root .has-secondary-color { color: #6d6d6d; }:root .has-secondary-background-color { background-color: #6d6d6d; }pre,fieldset,input,textarea,table,table *,hr { border-color: #dbdbdb; }caption,code,code,kbd,samp,.wp-block-table.is-style-stripes tbody tr:nth-child(odd),:root .has-subtle-background-background-color { background-color: #dbdbdb; }.wp-block-table.is-style-stripes { border-bottom-color: #dbdbdb; }.wp-block-latest-posts.is-grid li { border-top-color: #dbdbdb; }:root .has-subtle-background-color { color: #dbdbdb; }body:not(.overlay-header) .primary-menu > li > a,body:not(.overlay-header) .primary-menu > li > .icon,.modal-menu a,.footer-menu a, .footer-widgets a,#site-footer .wp-block-button.is-style-outline,.wp-block-pullquote:before,.singular:not(.overlay-header) .entry-header a,.archive-header a,.header-footer-group .color-accent,.header-footer-group .color-accent-hover:hover { color: #cd2653; }.social-icons a,#site-footer button:not(.toggle),#site-footer .button,#site-footer .faux-button,#site-footer .wp-block-button__link,#site-footer .wp-block-file__button,#site-footer input[type="button"],#site-footer input[type="reset"],#site-footer input[type="submit"] { background-color: #cd2653; }.header-footer-group,body:not(.overlay-header) #site-header .toggle,.menu-modal .toggle { color: #000000; }body:not(.overlay-header) .primary-menu ul { background-color: #000000; }body:not(.overlay-header) .primary-menu > li > ul:after { border-bottom-color: #000000; }body:not(.overlay-header) .primary-menu ul ul:after { border-left-color: #000000; }.site-description,body:not(.overlay-header) .toggle-inner .toggle-text,.widget .post-date,.widget .rss-date,.widget_archive li,.widget_categories li,.widget cite,.widget_pages li,.widget_meta li,.widget_nav_menu li,.powered-by-wordpress,.to-the-top,.singular .entry-header .post-meta,.singular:not(.overlay-header) .entry-header .post-meta a { color: #6d6d6d; }.header-footer-group pre,.header-footer-group fieldset,.header-footer-group input,.header-footer-group textarea,.header-footer-group table,.header-footer-group table *,.footer-nav-widgets-wrapper,#site-footer,.menu-modal nav *,.footer-widgets-outer-wrapper,.footer-top { border-color: #dcd7ca; }.header-footer-group table caption,body:not(.overlay-header) .header-inner .toggle-wrapper::before { background-color: #dcd7ca; }
+.post-author { clip: rect(1px, 1px, 1px, 1px); height: 1px; position: absolute; overflow: hidden; width: 1px; }
+/*# sourceURL=twentytwenty-style-inline-css */
+</style>
+<script>
+/*	-----------------------------------------------------------------------------------------------
+	Namespace
+--------------------------------------------------------------------------------------------------- */
+
+var twentytwenty = twentytwenty || {};
+
+// Set a default value for scrolled.
+twentytwenty.scrolled = 0;
+
+// polyfill closest
+// https://developer.mozilla.org/en-US/docs/Web/API/Element/closest#Polyfill
+if ( ! Element.prototype.closest ) {
+	Element.prototype.closest = function( s ) {
+		var el = this;
+
+		do {
+			if ( el.matches( s ) ) {
+				return el;
+			}
+
+			el = el.parentElement || el.parentNode;
+		} while ( el !== null && el.nodeType === 1 );
+
+		return null;
+	};
+}
+
+// polyfill forEach
+// https://developer.mozilla.org/en-US/docs/Web/API/NodeList/forEach#Polyfill
+if ( window.NodeList && ! NodeList.prototype.forEach ) {
+	NodeList.prototype.forEach = function( callback, thisArg ) {
+		var i;
+		var len = this.length;
+
+		thisArg = thisArg || window;
+
+		for ( i = 0; i < len; i++ ) {
+			callback.call( thisArg, this[ i ], i, this );
+		}
+	};
+}
+
+// event "polyfill"
+twentytwenty.createEvent = function( eventName ) {
+	var event;
+	if ( typeof window.Event === 'function' ) {
+		event = new Event( eventName );
+	} else {
+		event = document.createEvent( 'Event' );
+		event.initEvent( eventName, true, false );
+	}
+	return event;
+};
+
+// matches "polyfill"
+// https://developer.mozilla.org/es/docs/Web/API/Element/matches
+if ( ! Element.prototype.matches ) {
+	Element.prototype.matches =
+		Element.prototype.matchesSelector ||
+		Element.prototype.mozMatchesSelector ||
+		Element.prototype.msMatchesSelector ||
+		Element.prototype.oMatchesSelector ||
+		Element.prototype.webkitMatchesSelector ||
+		function( s ) {
+			var matches = ( this.document || this.ownerDocument ).querySelectorAll( s ),
+				i = matches.length;
+			while ( --i >= 0 && matches.item( i ) !== this ) {}
+			return i > -1;
+		};
+}
+
+// Add a class to the body for when touch is enabled for browsers that don't support media queries
+// for interaction media features. Adapted from <https://codepen.io/Ferie/pen/vQOMmO>.
+twentytwenty.touchEnabled = {
+
+	init: function() {
+		var matchMedia = function() {
+			// Include the 'heartz' as a way to have a non-matching MQ to help terminate the join. See <https://git.io/vznFH>.
+			var prefixes = [ '-webkit-', '-moz-', '-o-', '-ms-' ];
+			var query = [ '(', prefixes.join( 'touch-enabled),(' ), 'heartz', ')' ].join( '' );
+			return window.matchMedia && window.matchMedia( query ).matches;
+		};
+
+		if ( ( 'ontouchstart' in window ) || ( window.DocumentTouch && document instanceof window.DocumentTouch ) || matchMedia() ) {
+			document.body.classList.add( 'touch-enabled' );
+		}
+	}
+}; // twentytwenty.touchEnabled
+
+/*	-----------------------------------------------------------------------------------------------
+	Cover Modals
+--------------------------------------------------------------------------------------------------- */
+
+twentytwenty.coverModals = {
+
+	init: function() {
+		if ( document.querySelector( '.cover-modal' ) ) {
+			// Handle cover modals when they're toggled.
+			this.onToggle();
+
+			// When toggled, untoggle if visitor clicks on the wrapping element of the modal.
+			this.outsideUntoggle();
+
+			// Close on escape key press.
+			this.closeOnEscape();
+
+			// Hide and show modals before and after their animations have played out.
+			this.hideAndShowModals();
+		}
+	},
+
+	// Handle cover modals when they're toggled.
+	onToggle: function() {
+		document.querySelectorAll( '.cover-modal' ).forEach( function( element ) {
+			element.addEventListener( 'toggled', function( event ) {
+				var modal = event.target,
+					body = document.body;
+
+				if ( modal.classList.contains( 'active' ) ) {
+					body.classList.add( 'showing-modal' );
+				} else {
+					body.classList.remove( 'showing-modal' );
+					body.classList.add( 'hiding-modal' );
+
+					// Remove the hiding class after a delay, when animations have been run.
+					setTimeout( function() {
+						body.classList.remove( 'hiding-modal' );
+					}, 500 );
+				}
+			} );
+		} );
+	},
+
+	// Close modal on outside click.
+	outsideUntoggle: function() {
+		document.addEventListener( 'click', function( event ) {
+			var target = event.target;
+			var modal = document.querySelector( '.cover-modal.active' );
+
+			// if target onclick is <a> with # within the href attribute
+			if ( event.target.tagName.toLowerCase() === 'a' && event.target.hash.includes( '#' ) && modal !== null ) {
+				// untoggle the modal
+				this.untoggleModal( modal );
+				// wait 550 and scroll to the anchor
+				setTimeout( function() {
+					var anchor = document.getElementById( event.target.hash.slice( 1 ) );
+					anchor.scrollIntoView();
+				}, 550 );
+			}
+
+			if ( target === modal ) {
+				this.untoggleModal( target );
+			}
+		}.bind( this ) );
+	},
+
+	// Close modal on escape key press.
+	closeOnEscape: function() {
+		document.addEventListener( 'keydown', function( event ) {
+			if ( event.keyCode === 27 ) {
+				event.preventDefault();
+				document.querySelectorAll( '.cover-modal.active' ).forEach( function( element ) {
+					this.untoggleModal( element );
+				}.bind( this ) );
+			}
+		}.bind( this ) );
+	},
+
+	// Hide and show modals before and after their animations have played out.
+	hideAndShowModals: function() {
+		var _doc = document,
+			_win = window,
+			modals = _doc.querySelectorAll( '.cover-modal' ),
+			htmlStyle = _doc.documentElement.style,
+			adminBar = _doc.querySelector( '#wpadminbar' );
+
+		function getAdminBarHeight( negativeValue ) {
+			var height,
+				currentScroll = _win.pageYOffset;
+
+			if ( adminBar ) {
+				height = currentScroll + adminBar.getBoundingClientRect().height;
+
+				return negativeValue ? -height : height;
+			}
+
+			return currentScroll === 0 ? 0 : -currentScroll;
+		}
+
+		function htmlStyles() {
+			var overflow = _win.innerHeight > _doc.documentElement.getBoundingClientRect().height;
+
+			return {
+				'overflow-y': overflow ? 'hidden' : 'scroll',
+				position: 'fixed',
+				width: '100%',
+				top: getAdminBarHeight( true ) + 'px',
+				left: 0
+			};
+		}
+
+		// Show the modal.
+		modals.forEach( function( modal ) {
+			modal.addEventListener( 'toggle-target-before-inactive', function( event ) {
+				var styles = htmlStyles(),
+					offsetY = _win.pageYOffset,
+					paddingTop = ( Math.abs( getAdminBarHeight() ) - offsetY ) + 'px',
+					mQuery = _win.matchMedia( '(max-width: 600px)' );
+
+				if ( event.target !== modal ) {
+					return;
+				}
+
+				Object.keys( styles ).forEach( function( styleKey ) {
+					htmlStyle.setProperty( styleKey, styles[ styleKey ] );
+				} );
+
+				_win.twentytwenty.scrolled = parseInt( styles.top, 10 );
+
+				if ( adminBar ) {
+					_doc.body.style.setProperty( 'padding-top', paddingTop );
+
+					if ( mQuery.matches ) {
+						if ( offsetY >= getAdminBarHeight() ) {
+							modal.style.setProperty( 'top', 0 );
+						} else {
+							modal.style.setProperty( 'top', ( getAdminBarHeight() - offsetY ) + 'px' );
+						}
+					}
+				}
+
+				modal.classList.add( 'show-modal' );
+			} );
+
+			// Hide the modal after a delay, so animations have time to play out.
+			modal.addEventListener( 'toggle-target-after-inactive', function( event ) {
+				if ( event.target !== modal ) {
+					return;
+				}
+
+				setTimeout( function() {
+					var clickedEl = twentytwenty.toggles.clickedEl;
+
+					modal.classList.remove( 'show-modal' );
+
+					Object.keys( htmlStyles() ).forEach( function( styleKey ) {
+						htmlStyle.removeProperty( styleKey );
+					} );
+
+					if ( adminBar ) {
+						_doc.body.style.removeProperty( 'padding-top' );
+						modal.style.removeProperty( 'top' );
+					}
+
+					if ( clickedEl !== false ) {
+						clickedEl.focus();
+						clickedEl = false;
+					}
+
+					_win.scrollTo( 0, Math.abs( _win.twentytwenty.scrolled + getAdminBarHeight() ) );
+
+					_win.twentytwenty.scrolled = 0;
+				}, 500 );
+			} );
+		} );
+	},
+
+	// Untoggle a modal.
+	untoggleModal: function( modal ) {
+		var modalTargetClass,
+			modalToggle = false;
+
+		// If the modal has specified the string (ID or class) used by toggles to target it, untoggle the toggles with that target string.
+		// The modal-target-string must match the string toggles use to target the modal.
+		if ( modal.dataset.modalTargetString ) {
+			modalTargetClass = modal.dataset.modalTargetString;
+
+			modalToggle = document.querySelector( '*[data-toggle-target="' + modalTargetClass + '"]' );
+		}
+
+		// If a modal toggle exists, trigger it so all of the toggle options are included.
+		if ( modalToggle ) {
+			modalToggle.click();
+
+			// If one doesn't exist, just hide the modal.
+		} else {
+			modal.classList.remove( 'active' );
+		}
+	}
+
+}; // twentytwenty.coverModals
+
+/*	-----------------------------------------------------------------------------------------------
+	Intrinsic Ratio Embeds
+--------------------------------------------------------------------------------------------------- */
+
+twentytwenty.intrinsicRatioVideos = {
+
+	init: function() {
+		this.makeFit();
+
+		window.addEventListener( 'resize', function() {
+			this.makeFit();
+		}.bind( this ) );
+	},
+
+	makeFit: function() {
+		document.querySelectorAll( 'iframe, object, video' ).forEach( function( video ) {
+			var ratio, iTargetWidth,
+				container = video.parentNode;
+
+			// Skip videos we want to ignore.
+			if ( video.classList.contains( 'intrinsic-ignore' ) || video.parentNode.classList.contains( 'intrinsic-ignore' ) ) {
+				return true;
+			}
+
+			if ( ! video.dataset.origwidth ) {
+				// Get the video element proportions.
+				video.setAttribute( 'data-origwidth', video.width );
+				video.setAttribute( 'data-origheight', video.height );
+			}
+
+			iTargetWidth = container.offsetWidth;
+
+			// Get ratio from proportions.
+			ratio = iTargetWidth / video.dataset.origwidth;
+
+			// Scale based on ratio, thus retaining proportions.
+			video.style.width = iTargetWidth + 'px';
+			video.style.height = ( video.dataset.origheight * ratio ) + 'px';
+		} );
+	}
+
+}; // twentytwenty.instrinsicRatioVideos
+
+/*	-----------------------------------------------------------------------------------------------
+	Modal Menu
+--------------------------------------------------------------------------------------------------- */
+twentytwenty.modalMenu = {
+
+	init: function() {
+		// If the current menu item is in a sub level, expand all the levels higher up on load.
+		this.expandLevel();
+		this.keepFocusInModal();
+	},
+
+	expandLevel: function() {
+		var modalMenus = document.querySelectorAll( '.modal-menu' );
+
+		modalMenus.forEach( function( modalMenu ) {
+			var activeMenuItem = modalMenu.querySelector( '.current-menu-item' );
+
+			if ( activeMenuItem ) {
+				twentytwentyFindParents( activeMenuItem, 'li' ).forEach( function( element ) {
+					var subMenuToggle = element.querySelector( '.sub-menu-toggle' );
+					if ( subMenuToggle ) {
+						twentytwenty.toggles.performToggle( subMenuToggle, true );
+					}
+				} );
+			}
+		} );
+	},
+
+	keepFocusInModal: function() {
+		var _doc = document;
+
+		_doc.addEventListener( 'keydown', function( event ) {
+			var toggleTarget, modal, selectors, elements, menuType, bottomMenu, activeEl, lastEl, firstEl, tabKey, shiftKey,
+				clickedEl = twentytwenty.toggles.clickedEl;
+
+			if ( clickedEl && _doc.body.classList.contains( 'showing-modal' ) ) {
+				toggleTarget = clickedEl.dataset.toggleTarget;
+				selectors = 'input, a, button';
+				modal = _doc.querySelector( toggleTarget );
+
+				elements = modal.querySelectorAll( selectors );
+				elements = Array.prototype.slice.call( elements );
+
+				if ( '.menu-modal' === toggleTarget ) {
+					menuType = window.matchMedia( '(min-width: 1000px)' ).matches;
+					menuType = menuType ? '.expanded-menu' : '.mobile-menu';
+
+					elements = elements.filter( function( element ) {
+						return null !== element.closest( menuType ) && null !== element.offsetParent;
+					} );
+
+					elements.unshift( _doc.querySelector( '.close-nav-toggle' ) );
+
+					bottomMenu = _doc.querySelector( '.menu-bottom > nav' );
+
+					if ( bottomMenu ) {
+						bottomMenu.querySelectorAll( selectors ).forEach( function( element ) {
+							elements.push( element );
+						} );
+					}
+				}
+
+				lastEl = elements[ elements.length - 1 ];
+				firstEl = elements[0];
+				activeEl = _doc.activeElement;
+				tabKey = event.keyCode === 9;
+				shiftKey = event.shiftKey;
+
+				if ( ! shiftKey && tabKey && lastEl === activeEl ) {
+					event.preventDefault();
+					firstEl.focus();
+				}
+
+				if ( shiftKey && tabKey && firstEl === activeEl ) {
+					event.preventDefault();
+					lastEl.focus();
+				}
+			}
+		} );
+	}
+}; // twentytwenty.modalMenu
+
+/*	-----------------------------------------------------------------------------------------------
+	Primary Menu
+--------------------------------------------------------------------------------------------------- */
+
+twentytwenty.primaryMenu = {
+
+	init: function() {
+		this.focusMenuWithChildren();
+	},
+
+	// The focusMenuWithChildren() function implements Keyboard Navigation in the Primary Menu
+	// by adding the '.focus' class to all 'li.menu-item-has-children' when the focus is on the 'a' element.
+	focusMenuWithChildren: function() {
+		// Get all the link elements within the primary menu.
+		var links, i, len,
+			menu = document.querySelector( '.primary-menu-wrapper' );
+
+		if ( ! menu ) {
+			return false;
+		}
+
+		links = menu.getElementsByTagName( 'a' );
+
+		// Each time a menu link is focused or blurred, toggle focus.
+		for ( i = 0, len = links.length; i < len; i++ ) {
+			links[i].addEventListener( 'focus', toggleFocus, true );
+			links[i].addEventListener( 'blur', toggleFocus, true );
+		}
+
+		//Sets or removes the .focus class on an element.
+		function toggleFocus() {
+			var self = this;
+
+			// Move up through the ancestors of the current link until we hit .primary-menu.
+			while ( -1 === self.className.indexOf( 'primary-menu' ) ) {
+				// On li elements toggle the class .focus.
+				if ( 'li' === self.tagName.toLowerCase() ) {
+					if ( -1 !== self.className.indexOf( 'focus' ) ) {
+						self.className = self.className.replace( ' focus', '' );
+					} else {
+						self.className += ' focus';
+					}
+				}
+				self = self.parentElement;
+			}
+		}
+	}
+}; // twentytwenty.primaryMenu
+
+/*	-----------------------------------------------------------------------------------------------
+	Toggles
+--------------------------------------------------------------------------------------------------- */
+
+twentytwenty.toggles = {
+
+	clickedEl: false,
+
+	init: function() {
+		// Do the toggle.
+		this.toggle();
+
+		// Check for toggle/untoggle on resize.
+		this.resizeCheck();
+
+		// Check for untoggle on escape key press.
+		this.untoggleOnEscapeKeyPress();
+	},
+
+	performToggle: function( element, instantly ) {
+		var target, timeOutTime, classToToggle,
+			self = this,
+			_doc = document,
+			// Get our targets.
+			toggle = element,
+			targetString = toggle.dataset.toggleTarget,
+			activeClass = 'active';
+
+		// Elements to focus after modals are closed.
+		if ( ! _doc.querySelectorAll( '.show-modal' ).length ) {
+			self.clickedEl = _doc.activeElement;
+		}
+
+		if ( targetString === 'next' ) {
+			target = toggle.nextSibling;
+		} else {
+			target = _doc.querySelector( targetString );
+		}
+
+		// Trigger events on the toggle targets before they are toggled.
+		if ( target.classList.contains( activeClass ) ) {
+			target.dispatchEvent( twentytwenty.createEvent( 'toggle-target-before-active' ) );
+		} else {
+			target.dispatchEvent( twentytwenty.createEvent( 'toggle-target-before-inactive' ) );
+		}
+
+		// Get the class to toggle, if specified.
+		classToToggle = toggle.dataset.classToToggle ? toggle.dataset.classToToggle : activeClass;
+
+		// For cover modals, set a short timeout duration so the class animations have time to play out.
+		timeOutTime = 0;
+
+		if ( target.classList.contains( 'cover-modal' ) ) {
+			timeOutTime = 10;
+		}
+
+		setTimeout( function() {
+			var focusElement,
+				subMenued = target.classList.contains( 'sub-menu' ),
+				newTarget = subMenued ? toggle.closest( '.menu-item' ).querySelector( '.sub-menu' ) : target,
+				duration = toggle.dataset.toggleDuration;
+
+			// Toggle the target of the clicked toggle.
+			if ( toggle.dataset.toggleType === 'slidetoggle' && ! instantly && duration !== '0' ) {
+				twentytwentyMenuToggle( newTarget, duration );
+			} else {
+				newTarget.classList.toggle( classToToggle );
+			}
+
+			// If the toggle target is 'next', only give the clicked toggle the active class.
+			if ( targetString === 'next' ) {
+				toggle.classList.toggle( activeClass );
+			} else if ( target.classList.contains( 'sub-menu' ) ) {
+				toggle.classList.toggle( activeClass );
+			} else {
+				// If not, toggle all toggles with this toggle target.
+				_doc.querySelector( '*[data-toggle-target="' + targetString + '"]' ).classList.toggle( activeClass );
+			}
+
+			// Toggle aria-expanded on the toggle.
+			twentytwentyToggleAttribute( toggle, 'aria-expanded', 'true', 'false' );
+
+			if ( self.clickedEl && -1 !== toggle.getAttribute( 'class' ).indexOf( 'close-' ) ) {
+				twentytwentyToggleAttribute( self.clickedEl, 'aria-expanded', 'true', 'false' );
+			}
+
+			// Toggle body class.
+			if ( toggle.dataset.toggleBodyClass ) {
+				_doc.body.classList.toggle( toggle.dataset.toggleBodyClass );
+			}
+
+			// Check whether to set focus.
+			if ( toggle.dataset.setFocus ) {
+				focusElement = _doc.querySelector( toggle.dataset.setFocus );
+
+				if ( focusElement ) {
+					if ( target.classList.contains( activeClass ) ) {
+						focusElement.focus();
+					} else {
+						focusElement.blur();
+					}
+				}
+			}
+
+			// Trigger the toggled event on the toggle target.
+			target.dispatchEvent( twentytwenty.createEvent( 'toggled' ) );
+
+			// Trigger events on the toggle targets after they are toggled.
+			if ( target.classList.contains( activeClass ) ) {
+				target.dispatchEvent( twentytwenty.createEvent( 'toggle-target-after-active' ) );
+			} else {
+				target.dispatchEvent( twentytwenty.createEvent( 'toggle-target-after-inactive' ) );
+			}
+		}, timeOutTime );
+	},
+
+	// Do the toggle.
+	toggle: function() {
+		var self = this;
+
+		document.querySelectorAll( '*[data-toggle-target]' ).forEach( function( element ) {
+			element.addEventListener( 'click', function( event ) {
+				event.preventDefault();
+				self.performToggle( element );
+			} );
+		} );
+	},
+
+	// Check for toggle/untoggle on screen resize.
+	resizeCheck: function() {
+		if ( document.querySelectorAll( '*[data-untoggle-above], *[data-untoggle-below], *[data-toggle-above], *[data-toggle-below]' ).length ) {
+			window.addEventListener( 'resize', function() {
+				var winWidth = window.innerWidth,
+					toggles = document.querySelectorAll( '.toggle' );
+
+				toggles.forEach( function( toggle ) {
+					var unToggleAbove = toggle.dataset.untoggleAbove,
+						unToggleBelow = toggle.dataset.untoggleBelow,
+						toggleAbove = toggle.dataset.toggleAbove,
+						toggleBelow = toggle.dataset.toggleBelow;
+
+					// If no width comparison is set, continue.
+					if ( ! unToggleAbove && ! unToggleBelow && ! toggleAbove && ! toggleBelow ) {
+						return;
+					}
+
+					// If the toggle width comparison is true, toggle the toggle.
+					if (
+						( ( ( unToggleAbove && winWidth > unToggleAbove ) ||
+							( unToggleBelow && winWidth < unToggleBelow ) ) &&
+							toggle.classList.contains( 'active' ) ) ||
+						( ( ( toggleAbove && winWidth > toggleAbove ) ||
+							( toggleBelow && winWidth < toggleBelow ) ) &&
+							! toggle.classList.contains( 'active' ) )
+					) {
+						toggle.click();
+					}
+				} );
+			} );
+		}
+	},
+
+	// Close toggle on escape key press.
+	untoggleOnEscapeKeyPress: function() {
+		document.addEventListener( 'keyup', function( event ) {
+			if ( event.key === 'Escape' ) {
+				document.querySelectorAll( '*[data-untoggle-on-escape].active' ).forEach( function( element ) {
+					if ( element.classList.contains( 'active' ) ) {
+						element.click();
+					}
+				} );
+			}
+		} );
+	}
+
+}; // twentytwenty.toggles
+
+/**
+ * Is the DOM ready?
+ *
+ * This implementation is coming from https://gomakethings.com/a-native-javascript-equivalent-of-jquerys-ready-method/
+ *
+ * @since Twenty Twenty 1.0
+ *
+ * @param {Function} fn Callback function to run.
+ */
+function twentytwentyDomReady( fn ) {
+	if ( typeof fn !== 'function' ) {
+		return;
+	}
+
+	if ( document.readyState === 'interactive' || document.readyState === 'complete' ) {
+		return fn();
+	}
+
+	document.addEventListener( 'DOMContentLoaded', fn, false );
+}
+
+twentytwentyDomReady( function() {
+	twentytwenty.toggles.init();              // Handle toggles.
+	twentytwenty.coverModals.init();          // Handle cover modals.
+	twentytwenty.intrinsicRatioVideos.init(); // Retain aspect ratio of videos on window resize.
+	twentytwenty.modalMenu.init();            // Modal Menu.
+	twentytwenty.primaryMenu.init();          // Primary Menu.
+	twentytwenty.touchEnabled.init();         // Add class to body if device is touch-enabled.
+} );
+
+/*	-----------------------------------------------------------------------------------------------
+	Helper functions
+--------------------------------------------------------------------------------------------------- */
+
+/* Toggle an attribute ----------------------- */
+
+function twentytwentyToggleAttribute( element, attribute, trueVal, falseVal ) {
+	var toggles;
+
+	if ( ! element.hasAttribute( attribute ) ) {
+		return;
+	}
+
+	if ( trueVal === undefined ) {
+		trueVal = true;
+	}
+	if ( falseVal === undefined ) {
+		falseVal = false;
+	}
+
+	/*
+	 * Take into account multiple toggle elements that need their state to be
+	 * synced. For example: the Search toggle buttons for desktop and mobile.
+	 */
+	toggles = document.querySelectorAll( '[data-toggle-target="' + element.dataset.toggleTarget + '"]' );
+
+	toggles.forEach( function( toggle ) {
+		if ( ! toggle.hasAttribute( attribute ) ) {
+			return;
+		}
+
+		if ( toggle.getAttribute( attribute ) !== trueVal ) {
+			toggle.setAttribute( attribute, trueVal );
+		} else {
+			toggle.setAttribute( attribute, falseVal );
+		}
+	} );
+}
+
+/**
+ * Toggle a menu item on or off.
+ *
+ * @since Twenty Twenty 1.0
+ *
+ * @param {HTMLElement} target
+ * @param {number} duration
+ */
+function twentytwentyMenuToggle( target, duration ) {
+	var initialParentHeight, finalParentHeight, menu, menuItems, transitionListener,
+		initialPositions = [],
+		finalPositions = [];
+
+	if ( ! target ) {
+		return;
+	}
+
+	menu = target.closest( '.menu-wrapper' );
+
+	// Step 1: look at the initial positions of every menu item.
+	menuItems = menu.querySelectorAll( '.menu-item' );
+
+	menuItems.forEach( function( menuItem, index ) {
+		initialPositions[ index ] = { x: menuItem.offsetLeft, y: menuItem.offsetTop };
+	} );
+	initialParentHeight = target.parentElement.offsetHeight;
+
+	target.classList.add( 'toggling-target' );
+
+	// Step 2: toggle target menu item and look at the final positions of every menu item.
+	target.classList.toggle( 'active' );
+
+	menuItems.forEach( function( menuItem, index ) {
+		finalPositions[ index ] = { x: menuItem.offsetLeft, y: menuItem.offsetTop };
+	} );
+	finalParentHeight = target.parentElement.offsetHeight;
+
+	// Step 3: close target menu item again.
+	// The whole process happens without giving the browser a chance to render, so it's invisible.
+	target.classList.toggle( 'active' );
+
+	/*
+	 * Step 4: prepare animation.
+	 * Position all the items with absolute offsets, at the same starting position.
+	 * Shouldn't result in any visual changes if done right.
+	 */
+	menu.classList.add( 'is-toggling' );
+	target.classList.toggle( 'active' );
+	menuItems.forEach( function( menuItem, index ) {
+		var initialPosition = initialPositions[ index ];
+		if ( initialPosition.y === 0 && menuItem.parentElement === target ) {
+			initialPosition.y = initialParentHeight;
+		}
+		menuItem.style.transform = 'translate(' + initialPosition.x + 'px, ' + initialPosition.y + 'px)';
+	} );
+
+	/*
+	 * The double rAF is unfortunately needed, since we're toggling CSS classes, and
+	 * the only way to ensure layout completion here across browsers is to wait twice.
+	 * This just delays the start of the animation by 2 frames and is thus not an issue.
+	 */
+	requestAnimationFrame( function() {
+		requestAnimationFrame( function() {
+			/*
+			 * Step 5: start animation by moving everything to final position.
+			 * All the layout work has already happened, while we were preparing for the animation.
+			 * The animation now runs entirely in CSS, using cheap CSS properties (opacity and transform)
+			 * that don't trigger the layout or paint stages.
+			 */
+			menu.classList.add( 'is-animating' );
+			menuItems.forEach( function( menuItem, index ) {
+				var finalPosition = finalPositions[ index ];
+				if ( finalPosition.y === 0 && menuItem.parentElement === target ) {
+					finalPosition.y = finalParentHeight;
+				}
+				if ( duration !== undefined ) {
+					menuItem.style.transitionDuration = duration + 'ms';
+				}
+				menuItem.style.transform = 'translate(' + finalPosition.x + 'px, ' + finalPosition.y + 'px)';
+			} );
+			if ( duration !== undefined ) {
+				target.style.transitionDuration = duration + 'ms';
+			}
+		} );
+
+		// Step 6: finish toggling.
+		// Remove all transient classes when the animation ends.
+		transitionListener = function() {
+			menu.classList.remove( 'is-animating' );
+			menu.classList.remove( 'is-toggling' );
+			target.classList.remove( 'toggling-target' );
+			menuItems.forEach( function( menuItem ) {
+				menuItem.style.transform = '';
+				menuItem.style.transitionDuration = '';
+			} );
+			target.style.transitionDuration = '';
+			target.removeEventListener( 'transitionend', transitionListener );
+		};
+
+		target.addEventListener( 'transitionend', transitionListener );
+	} );
+}
+
+/**
+ * Traverses the DOM up to find elements matching the query.
+ *
+ * @since Twenty Twenty 1.0
+ *
+ * @param {HTMLElement} target
+ * @param {string} query
+ * @return {NodeList} parents matching query
+ */
+function twentytwentyFindParents( target, query ) {
+	var parents = [];
+
+	// Recursively go up the DOM adding matches to the parents array.
+	function traverse( item ) {
+		var parent = item.parentNode;
+		if ( parent instanceof HTMLElement ) {
+			if ( parent.matches( query ) ) {
+				parents.push( parent );
+			}
+			traverse( parent );
+		}
+	}
+
+	traverse( target );
+
+	return parents;
+}
+</script>
 
 </head>
