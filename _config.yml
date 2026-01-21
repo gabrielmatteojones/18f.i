@@ -43,9 +43,15 @@ plugins:
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
 
 collections:
+  pub:
+    output: true
+    permalink: /pub/:permalink
+  bw:
+    output: true
+    permalink: /bw/:permalink
   book:
     output: true
-    permalink: /opac/:slug/   # usa lo slug (nome file slugificato)
+    permalink: /pub/opac/:slug/   # usa lo slug (nome file slugificato)
 
 # Exclude these files from your production _site
 exclude:
